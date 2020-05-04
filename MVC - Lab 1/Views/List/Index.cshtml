@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+<table>
+    <tr>
+        <td>Username</td>
+        <td>Password</td>
+    </tr>
+    @foreach(var i in Model)
+    {
+<tr>
+    <td>@i.Username</td>
+    <td>@i.Password</td>
+</tr>
+    }
+</table>
