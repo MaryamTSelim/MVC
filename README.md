@@ -17,7 +17,7 @@
 				<li>
 					view
 				</li>
-				<li?\>
+				<li>
 					controller
 				</li>
 			</ul>
