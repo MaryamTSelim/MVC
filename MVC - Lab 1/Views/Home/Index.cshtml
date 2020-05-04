@@ -4,20 +4,29 @@
     ViewBag.Title = "Home";
 }
 @Html.ActionLink("Accounts", "List")
+<br />
+<br />
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-{<table>
+{
+   
+    <table>
+
         <tr>
             <td>@Html.LabelFor(a => a.Username)</td>
             <td>@Html.TextBoxFor(a => a.Username)</td>
+            <td>@Html.ValidationMessageFor(a => a.Username, "Please enter username.", new { @class = "text-danger" })</td>
         </tr>
         <tr>
             <td>@Html.LabelFor(a => a.Password)</td>
             <td>@Html.PasswordFor(a => a.Password)</td>
+            <td>@Html.ValidationMessageFor(a => a.Password)</td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td></td>
+            <td>
                 <input type="submit" value="Login" />
             </td>
+            <td></td>
         </tr>
     </table>
 

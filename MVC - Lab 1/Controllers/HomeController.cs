@@ -15,12 +15,15 @@ namespace MVC___Lab_1.Controllers
             return View();
         }
 
-        
+
         [HttpPost]
         public ActionResult Index(User newUser)
         {
-            Console.WriteLine(newUser.Username);
-            UserUtil.Push(newUser);
+            if (ModelState.IsValid)
+            {
+                Console.WriteLine(newUser.Username);
+                UserUtil.Push(newUser);
+            }
             return View();
 
         }

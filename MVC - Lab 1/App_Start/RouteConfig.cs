@@ -11,6 +11,12 @@ namespace MVC___Lab_1
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapRoute(
+                name: "Homepage",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
+
+            );
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Login",
@@ -18,11 +24,12 @@ namespace MVC___Lab_1
                 defaults: new { controller = "Home", action = "Login"}
             );
             routes.MapRoute(
-                name: "Default",
+                name: "LoginLoad",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             
+
         }
     }
 }
